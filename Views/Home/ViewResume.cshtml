@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "ViewResume";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+<h2>View Resume</h2>
+
+<html>
+	<body>
+		
+		
+		<link href="~/Content/style.css" rel="stylesheet" />
+			
+
+		<div id="site_content">		
+			<div class="container">			
+				
+			<!-- Features -->
+				<div class="row">
+					<section class="8u">
+						
+					 <!-- Banner -->		
+						<div id="banner">
+							<a href="#"><img src="~/images/D.jpg" alt="banner image" /></a>
+						</div>						
+						
+						
+                                 <br>Resume Title   :<input type="text" name="email   ">
+                                            <input type="submit" value="VIEW RESUME">
+
+					</section>
+                    @foreach(var x in ViewBag.X)
+    {
+                  
+                                            <div class="extra-wrap" >
+                                            
+                                                <p class="p1">Resume Title : @x.res_Id</p>
+                                              <!--     <p class="p1">contact information :</p>
+                                                <p class="p1">First Name : @x.First_name</p>
+                                                <p class="p1">last Name : Rs: @x.Last_name</p>
+                                                <p class="p1">National Id Card No: @x.Nic</p>
+                                          
+                                                
+                                                  <p class="p1">Email  : @x.Email</p>
+                                                <p class="p1">Mobile   : @x.Mobile</p>
+                                                <p class="p1">Address : Rs: @x.Address</p>
+                                                <p class="p1">country : @x.country</p>
+                                                 <p class="p1">   Employement Details :</p>
+                                              <p class="p1">Experience    : @x.Experience</p>
+                                                <p class="p1">Skills   : @x.Skills</p>
+                                                <p class="p1">Your company  : Rs: @x.Company</p>
+                                                <p class="p1">Function Area  : @x.Func_Area</p>
+
+
+                                                      <p class="p1">Education Background :</p>
+                                                <p class="p1">Education    : @x.Education</p>
+                                                <p class="p1">Bachulars  : Rs: @x.Bachulars</p>
+                                                <p class="p1">Masters : @x.Masters</p>
+                                                  <p class="p1">Cgpa   : @x.Cgpa</p>-->
+                                                
+                                                 <p class="p1">@Html.ActionLink("Update", "updateResume", new { id=x.res_Id }) |
+                                                 @Html.ActionLink("Delete", "DeleteResume", new { id=x.res_Id }) </p>
+                                            </div>
+                                         
+    }
+					
+					<section class="4u">
+						<div id="sidebar">
+							
+							
+							
+						</div>
+					</section>
+					
+				</div>
+		    </div>
+		</div>		
+			
+	</body>
+</html>
